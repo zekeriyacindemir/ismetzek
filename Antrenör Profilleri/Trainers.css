@@ -1,0 +1,401 @@
+/* Eğitmenler Sayfası CSS */
+
+/* Hero Section */
+.trainers-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding: 80px 0;
+  margin-bottom: 40px;
+}
+
+.trainers-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.trainers-hero .lead {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Uzmanlık Filtresi */
+.specialty-filter {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+
+.specialty-filter h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.specialty-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.specialty-buttons .btn {
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Eğitmen Listesi */
+.trainers-list {
+  padding-bottom: 60px;
+}
+
+/* Eğitmen Kartı */
+.trainer-card {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.trainer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.trainer-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.trainer-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.trainer-card:hover .trainer-image {
+  transform: scale(1.1);
+}
+
+/* Eğitmen Resmi Overlay */
+.trainer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.trainer-card:hover .trainer-overlay {
+  opacity: 1;
+}
+
+.trainer-social {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+}
+
+.trainer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--primary-color);
+  margin: 0 5px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.trainer-social a:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Eğitmen Detayları */
+.trainer-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.rating-star {
+  color: #ffc107;
+}
+
+.trainer-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.trainer-title {
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.trainer-experience {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.trainer-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.specialty-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: rgba(13, 110, 253, 0.1);
+  color: var(--primary-color);
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.trainer-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Sertifikalar */
+.trainer-certifications h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.trainer-certifications ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.trainer-certifications li {
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+/* Müsaitlik */
+.trainer-availability p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+/* İletişim */
+.trainer-contact {
+  font-size: 0.9rem;
+}
+
+.trainer-contact a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.trainer-contact a:hover {
+  color: var(--primary-color);
+}
+
+.trainer-contact div {
+  margin-bottom: 5px;
+}
+
+/* Randevu Butonu */
+.book-trainer-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Randevu Modal */
+.booking-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.booking-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.booking-modal-content {
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.booking-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.booking-modal-header h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.booking-modal-body {
+  padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .trainers-hero h1 {
+    font-size: 2.4rem;
+  }
+  
+  .specialty-filter h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trainers-hero {
+    padding: 60px 0;
+  }
+  
+  .trainers-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .trainers-hero .lead {
+    font-size: 1rem;
+  }
+  
+  .specialty-filter {
+    padding: 30px 0;
+  }
+  
+  .trainer-image-container {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .trainers-hero {
+    padding: 40px 0;
+  }
+  
+  .trainers-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .specialty-filter h2 {
+    font-size: 1.4rem;
+  }
+  
+  .trainer-image-container {
+    height: 200px;
+  }
+}
+
+/* Değerlendirmeler Modal Stili */
+.reviews-modal .modal-content {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rating-big {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #212529;
+  line-height: 1;
+}
+
+.trainer-rating-summary {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.view-reviews {
+  color: #0d6efd;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.review-item {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.review-item:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6c757d;
+}
+
+.review-content {
+  padding-left: 52px;
+  margin-top: 8px;
+  font-style: italic;
+  color: #495057;
+}
+
+.review-date {
+  color: #6c757d;
+  font-size: 0.85rem;
+} 
