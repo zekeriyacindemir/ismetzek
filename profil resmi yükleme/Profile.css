@@ -1,0 +1,360 @@
+.profile-page {
+  padding: 60px 0;
+  min-height: calc(100vh - 160px);
+  background-color: var(--bg-light);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.profile-avatar {
+  position: relative;
+  margin-right: 30px;
+}
+
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.3);
+}
+
+.avatar-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-actions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  gap: 5px;
+}
+
+.edit-avatar-btn,
+.remove-avatar-btn {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.edit-avatar-btn:hover,
+.remove-avatar-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.remove-avatar-btn {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.remove-avatar-btn:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.upload-image-btn {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 15px;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.profile-info h2 {
+  color: var(--text-color);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.profile-info .email {
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.profile-info .membership {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  background-color: var(--primary-color-light);
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.profile-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.profile-tabs .nav-link {
+  color: var(--text-secondary);
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.profile-tabs .nav-link:hover {
+  color: var(--primary-color);
+}
+
+.profile-tabs .nav-link.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Üyelik Bilgileri Stilleri */
+.membership-tab {
+  padding: 20px 0;
+}
+
+.membership-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.membership-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.membership-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color-light);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.membership-title {
+  flex: 1;
+}
+
+.membership-title h3 {
+  margin: 0;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.membership-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.membership-info-item {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.membership-info-item:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.info-value {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.membership-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cancel-membership-btn {
+  font-weight: 600;
+}
+
+.membership-benefits-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.benefits-list li:last-child {
+  border-bottom: none;
+}
+
+.cancel-info {
+  background-color: #fff8e1;
+  border-left: 4px solid #ffc107;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.cancel-info h5 {
+  color: #856404;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cancel-info ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.cancel-info li {
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.cancel-info li:last-child {
+  margin-bottom: 0;
+}
+
+.history-tab {
+  padding: 20px 0;
+}
+
+.history-list {
+  margin-top: 20px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.history-item:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.history-date {
+  min-width: 100px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.history-details {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.history-details h5 {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.history-actions {
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-avatar {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .membership-details {
+    grid-template-columns: 1fr;
+  }
+
+  .history-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .history-date {
+    margin-bottom: 10px;
+  }
+
+  .history-details {
+    margin: 0 0 10px 0;
+    width: 100%;
+  }
+
+  .history-actions {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
